@@ -11,12 +11,12 @@ st.set_page_config(layout="wide")
 @st.cache_data # To store the results
 
 def data():
-    return pd.read_csv(r'C:\Users\user\OneDrive\Documents\Excel_Projects\Data Analysis\Preprocessing\Dataset\processed_data.csv')
+    return pd.read_csv('processed_data.csv')
 
 df = data()
 
 # Creating a streamlit sidebar
-st.sidebar.image(r'C:\Users\user\OneDrive\Documents\Excel_Projects\Data Analysis\img\logo.png', use_container_width=True) # Logo
+st.sidebar.image('logo.png', use_container_width=True) # Logo
 st.sidebar.title("Filter Options")
 
 # Dropdown Menu to select comparison type
@@ -161,7 +161,7 @@ elif comparison_type == "Comparative Analysis":
     # Adjust layout and show the plots
     st.pyplot(fig)
 
-st.sidebar.image(r'C:\Users\user\OneDrive\Documents\Excel_Projects\Data Analysis\img\mediawatch.png', use_container_width=True) 
+st.sidebar.image('mediawatch.png', use_container_width=True) 
 
 # Add the footer logo and trademark statement at the bottom
 #st.markdown("---")
